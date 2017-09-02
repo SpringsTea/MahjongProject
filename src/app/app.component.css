@@ -1,0 +1,8 @@
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+.table {
+  position: absolute;
+  height: 100%;
+  background-color: green;
+  background-image: url("/assets/images/felt.jpg"); 
+}
