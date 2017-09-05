@@ -1,0 +1,10 @@
+<div class="row hand">
+	<div class="col-lg-11">
+		<div class="col-lg-1" *ngFor="let tile of tiles">
+			<app-tile [tile]="tile"></app-tile>
+		</div>
+	</div>
+	<div class="col-lg-1" *ngIf="draw">
+			<app-tile [tile]="draw" (click)="draw.changeNumber(4)"></app-tile>
+	</div>
+</div>

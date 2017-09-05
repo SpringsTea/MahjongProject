@@ -1,0 +1,12 @@
+.hand{
+	height:250px;
+
+	border: 5px solid grey;
+	border-radius: 25px;
+	background-color:lightgrey;
+	background:rgba(220,220,220,0.5);
+
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top:15px;
+}

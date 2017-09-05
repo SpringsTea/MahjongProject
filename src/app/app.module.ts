@@ -8,20 +8,21 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './components/user/user.component';
 
 import {DataService} from './services/data.service';
+import { HandComponent } from './components/hand/hand.component';
+import { TileComponent } from './components/tile/tile.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent
+    UserComponent,
+    HandComponent,
+    TileComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
-    RouterModule.forRoot([
-    	{ path: 'scripts', redirectTo: './node_modules', pathMatch: 'full' }
-  	])
+    HttpModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

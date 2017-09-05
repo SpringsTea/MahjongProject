@@ -1,8 +1,7 @@
-@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-
-.table {
+.felt {
   position: absolute;
   height: 100%;
+  width: 100%;
   background-color: green;
   background-image: url("/assets/images/felt.jpg"); 
 }
