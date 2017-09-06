@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TileComponent } from '../tile/tile.component';
+import { Tile } from '../../interfaces/tile';
 
 @Component({
   selector: 'app-hand',
@@ -7,16 +8,19 @@ import { TileComponent } from '../tile/tile.component';
   styleUrls: ['./hand.component.css']
 })
 export class HandComponent implements OnInit {
-tiles:TileComponent[] = [];
-draw:TileComponent = null;
+tiles:Tile[] = [];
+draw:Tile = null;
+default = {
+	suit:'bamboo', number: 1
+}
 
   constructor() {
   	//Fill hand with 13 tiles
   	Array.from(Array(12)).forEach((x, i) => {
-	 this.tiles.push( new TileComponent() );
+	 this.tiles.push( Object.create(this.default) );//If I don't declare as a new object, all components will be bound to the same object
 	});
 
-	this.draw = new TileComponent();
+	this.draw = Object.create(this.default);
   	
   }
 

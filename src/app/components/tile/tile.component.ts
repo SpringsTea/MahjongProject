@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Tile } from '../../interfaces/tile';
 
 @Component({
   selector: 'app-tile',
@@ -15,19 +16,17 @@ export class TileComponent implements OnInit {
   tile: Tile;
 
   ngOnInit() {
-  	this.tile.number = 1;
-  	this.tile.suit = 'bamboo';
+
   }
 
-  changeNumber( num ){
-  	this.tile.number = num;
-  	console.log(num);
+  incrementTile( val ){
+  	if( val >= 9 ){
+  		return 1;
+  	}
+
+  	else{
+  		return val+1;
+  	}
   }
 
-
-}
-
-interface Tile{
-	suit:string;
-	number:number;
 }

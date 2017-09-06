@@ -1,3 +1,30 @@
-<div class="tile">
-	{{ tile.number }} of {{ tile.suit }}
+<div class="tile container-fluid">
+	<div class="row">
+		<img src="/assets/images/tiles/{{tile.suit}}/{{tile.suit}}{{tile.number}}.png" (click)="tile.number = incrementTile(tile.number)">
+	</div>
+	<div class="row number form-group">
+
+		<div class="col-md-3 arrow-column"> 
+			<button class="arrow glyphicon glyphicon-chevron-left">
+				
+			</button> 
+		</div>
+
+		<div class="col-md-6 input-column">
+			<input class="form-control" type="text" disabled="true" value="{{tile.number}}" (input)="tile.number = $event.target.value">
+		</div>
+
+		<div class="col-md-3 arrow-column"> 
+			<button class="arrow glyphicon glyphicon-chevron-right">
+				
+			</button> 
+		</div>
+
+	</div>
+
+	<div class="row suit form-group">
+		<div class="col-md-12">
+			<input class="form-control" type="text" disabled="true" value="{{tile.suit}}">
+		</div>
+	</div>
 </div>
